@@ -15,7 +15,8 @@ function writePassword() {
   passwordText.value = password;
 
 for (var i = 0; i <= passLength; i++) {
-    
+        var randomNum = Math.floor(Math.random() * characters.length);
+        password += characters.substring(randomNum, randomNum +1);
     }
 }
 
