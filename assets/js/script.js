@@ -34,111 +34,99 @@ generateBtn.addEventListener("click", writePassword);
 function genPass() {
   passLength = print ("Choose a password length between 8 and 128");
   console.log("Password Length" + passLength);
-}
+
 
 if(passLength <8 || passLength >128) {
   passLength = print ("Please choose a password length between 8 and 128");
   console.log("Password Length" + passLength);
 }
-
 else if (!passLength) {
   alert("Please input a number");
 }
-
 else {
   confirmBig = confirm ("Will you be using upper case letters in your password?");
   console.log("upper case" + confirmBig);
   confirmNum = confirm ("Will you be using numbers in your password?");
   console.log("numbers"+ confirmNum);
   confirmSmall = confirm ("Will you be using lower case letters in your password?");
-  console.log("lower case" + confirmSym);
+  console.log("lower case" + confirmSmall);
   confirmSym = confirm ("Will you be using any symbols in your password?");
   console.log("symbols" + confirmSym);
-}
+};
 
-if (confirmSym && confirmSmall && confirmNum && confirmBig);{
+// trying to use an array instead of what i was doing before
+
+if (confirmSym && confirmSmall && confirmNum && confirmBig); {
   userAns = symbols.concat(num, bigLetters, smallLetters);
   console.log(userAns);
 }
-
-else if (confirmSym && confirmNum && confirmBig);{
-  userAnswer = symbols.concat(num, bigLetters)
-  console.log(userAns);
+if (confirmBig); {
+    userAns = bigLetters;
+    console.log(userAns);
+  }
+if (confirmSym); {
+    userAns = symbols;
+    console.log(userAns);
+  }
+ if (confirmSmall); {
+    userAns = smallLetters;
+    console.log(userAns);
+  }
+if (confirmNum); {
+    userAns = num;
+    console.log(userAns);
 }
-
-else if (confirmSym && !confirmSmall && confirmBig);{
-  userAns = symbols.concat(bigLetters, smallLetters);
-  console.log(userAns);
-}
-
-else if (confirmSym && confirmSmall && confirmNum);{
-  userAns = symbols.concat(num, smallLetters);
-  console.log(userAns);
-}
-
-else if (confirmSmall && confirmNum && confirmBig);{
-  userAns = num.concat(bigLetters, smallLetters);
-  console.log(userAns);
-}
-
-else if (confirmNum && confirmBig);{
+if (confirmNum && confirmBig); {
   userAns = num.concat(bigLetters);
   console.log(userAns);
 }
-
-else if (confirmSym && confirmSmall);{
+if (confirmSym && confirmSmall); {
   userAns = symbols.concat( smallLetters);
   console.log(userAns);
 }
-
-else if (confirmSym && confirmBig);{
+if (confirmSym && confirmBig); {
   userAns = symbols.concat(bigLetters);
   console.log(userAns);
 }
-
-else if (confirmSmall && confirmNum);{
+if (confirmSmall && confirmNum); {
   userAns = num.concat(smallLetters);
   console.log(userAns);
 }
-
-else if (confirmSym && confirmNum); {
+if (confirmSym && confirmNum); {
   userAns = symbols.concat(num);
   console.log(userAns);
 }
-
-else if (confirmBig && confirmSmall); {
+if (confirmBig && confirmSmall); {
   userAns = bigLetters.concat(smallLetters);
   console.log(userAns);
 }
-
-else if (confirmBig); {
-  userAns = bigLetters;
+if (confirmSym && confirmNum && confirmBig); {
+  userAnswer = symbols.concat(num, bigLetters);
   console.log(userAns);
 }
-
-else if (confirmSym); {
-  userAns = symbols;
+if (confirmSym && confirmSmall && confirmBig); {
+  userAns = symbols.concat(bigLetters, smallLetters);
   console.log(userAns);
 }
-
-else if (confirmSmall); {
-  userAns = smallLetters;
+if (confirmSym && confirmSmall && confirmNum); {
+  userAns = symbols.concat(num, smallLetters);
   console.log(userAns);
 }
-
-else if (confirmNum); {
-  userAns = num;
+if (confirmSmall && confirmNum && confirmBig); {
+  userAns = num.concat(bigLetters, smallLetters);
   console.log(userAns);
 }
-
-else if (!confirmNum && !confirmSmall && !confirmBig && !confirmSym); {
+if (!confirmNum && !confirmSmall && !confirmBig && !confirmSym); {
 userAns = alert ("please choose what you would like to be included in your password.")
-}
+};
+
 
 
 for (var i = 0; i <passLength; i++); {
-  var passSelections = userAns (Math.floor(Math.random() * userAnswer.legnth)
-
+  var passSelections = userAnswer (Math.floor(Math.random() * userAns.legnth));
+  passOther.push(passSelections);
+  console.log(passSelections);
+  var password = passOther;
+console.log("your new password is:" + password + "please write this down to remember");
 }
-
-
+}
