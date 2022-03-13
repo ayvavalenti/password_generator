@@ -27,17 +27,17 @@ function genPass() {
 
 // Add event listener to generate button
 
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", genPass);
 
 //add the big boy stuff
 
 function genPass() {
-  passLength = print ("Choose a password length between 8 and 128");
+  passLength = prompt ("Choose a password length between 8 and 128");
   console.log("Password Length" + passLength);
 
 
 if(passLength <8 || passLength >128) {
-  passLength = print ("Please choose a password length between 8 and 128");
+  passLength = prompt ("Please choose a password length between 8 and 128");
   console.log("Password Length" + passLength);
 }
 else if (!passLength) {
@@ -56,10 +56,6 @@ else {
 
 // trying to use an array instead of what i was doing before
 
-if (confirmSym && confirmSmall && confirmNum && confirmBig); {
-  userAns = symbols.concat(num, bigLetters, smallLetters);
-  console.log(userAns);
-}
 if (confirmBig); {
     userAns = bigLetters;
     console.log(userAns);
@@ -116,17 +112,21 @@ if (confirmSmall && confirmNum && confirmBig); {
   userAns = num.concat(bigLetters, smallLetters);
   console.log(userAns);
 }
-if (!confirmNum && !confirmSmall && !confirmBig && !confirmSym); {
-userAns = alert ("please choose what you would like to be included in your password.")
+if (confirmSym && confirmSmall && confirmNum && confirmBig); {
+  userAns = symbols.concat(num, bigLetters, smallLetters);
+  console.log(userAns);
 };
 
 
 
-for (var i = 0; i <passLength; i++); {
+
+for (var i = 0; i < passLength; i++); {
   var passSelections = userAnswer (Math.floor(Math.random() * userAns.legnth));
   passOther.push(passSelections);
   console.log(passSelections);
-  var password = passOther;
-console.log("your new password is:" + password + "please write this down to remember");
+  
 }
+
+var password = passOther.join("");
+console.log("your new password is:" + password);
 }
