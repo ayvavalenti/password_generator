@@ -45,16 +45,16 @@ else if (!passLength) {
 }
 else {
   confirmBig = confirm ("Will you be using upper case letters in your password?");
-    console.log("upper case" + confirmBig);
+    console.log(confirmBig);
  
   confirmNum = confirm ("Will you be using numbers in your password?");
-    console.log("numbers"+ confirmNum);
+    console.log(confirmNum);
   
   confirmSmall = confirm ("Will you be using lower case letters in your password?");
-    console.log("lower case" + confirmSmall);
+    console.log(confirmSmall);
     
   confirmSym = confirm ("Will you be using any symbols in your password?");
-    console.log("symbols" + confirmSym);
+    console.log(confirmSym);
 };
 
 // trying to use an array instead of what i was doing before
