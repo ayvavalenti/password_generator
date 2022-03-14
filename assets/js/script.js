@@ -19,7 +19,7 @@ var passOther = [];
 // Write password to the #password input
 function genPass() {
     var password = generatePass();
-    var passwordText = document.querySelector("#password");
+        var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
     }
@@ -32,41 +32,44 @@ generateBtn.addEventListener("click", genPass);
 //add the big boy stuff
 
 function genPass() {
-  passLength = prompt ("Choose a password length between 8 and 128");
-  console.log("Password Length" + passLength);
+  passLength = prompt ("Choose a password length between 8 and 128 characters long");
+    console.log(passLength);
 
 
 if(passLength <8 || passLength >128) {
   passLength = prompt ("Please choose a password length between 8 and 128");
-  console.log("Password Length" + passLength);
+    console.log(passLength);
 }
 else if (!passLength) {
   alert("Please input a number");
 }
 else {
   confirmBig = confirm ("Will you be using upper case letters in your password?");
-  console.log("upper case" + confirmBig);
+    console.log("upper case" + confirmBig);
+ 
   confirmNum = confirm ("Will you be using numbers in your password?");
-  console.log("numbers"+ confirmNum);
+    console.log("numbers"+ confirmNum);
+  
   confirmSmall = confirm ("Will you be using lower case letters in your password?");
-  console.log("lower case" + confirmSmall);
+    console.log("lower case" + confirmSmall);
+    
   confirmSym = confirm ("Will you be using any symbols in your password?");
-  console.log("symbols" + confirmSym);
+    console.log("symbols" + confirmSym);
 };
 
 // trying to use an array instead of what i was doing before
 
 if (confirmBig); {
     userAns = bigLetters;
-    console.log(userAns);
+        console.log(userAns);
   }
 if (confirmSym); {
     userAns = symbols;
-    console.log(userAns);
+        console.log(userAns);
   }
  if (confirmSmall); {
     userAns = smallLetters;
-    console.log(userAns);
+        console.log(userAns);
   }
 if (confirmNum); {
     userAns = num;
@@ -74,47 +77,47 @@ if (confirmNum); {
 }
 if (confirmNum && confirmBig); {
   userAns = num.concat(bigLetters);
-  console.log(userAns);
-}
+    console.log(userAns);
+}   
 if (confirmSym && confirmSmall); {
   userAns = symbols.concat( smallLetters);
-  console.log(userAns);
+    console.log(userAns);
 }
 if (confirmSym && confirmBig); {
   userAns = symbols.concat(bigLetters);
-  console.log(userAns);
+    console.log(userAns);
 }
 if (confirmSmall && confirmNum); {
   userAns = num.concat(smallLetters);
-  console.log(userAns);
+    console.log(userAns);
 }
 if (confirmSym && confirmNum); {
   userAns = symbols.concat(num);
-  console.log(userAns);
+    console.log(userAns);
 }
 if (confirmBig && confirmSmall); {
   userAns = bigLetters.concat(smallLetters);
-  console.log(userAns);
+    console.log(userAns);
 }
 if (confirmSym && confirmNum && confirmBig); {
   userAnswer = symbols.concat(num, bigLetters);
-  console.log(userAns);
+    console.log(userAns);
 }
 if (confirmSym && confirmSmall && confirmBig); {
   userAns = symbols.concat(bigLetters, smallLetters);
-  console.log(userAns);
+    console.log(userAns);
 }
 if (confirmSym && confirmSmall && confirmNum); {
   userAns = symbols.concat(num, smallLetters);
-  console.log(userAns);
+    console.log(userAns);
 }
 if (confirmSmall && confirmNum && confirmBig); {
   userAns = num.concat(bigLetters, smallLetters);
-  console.log(userAns);
+    console.log(userAns);
 }
 if (confirmSym && confirmSmall && confirmNum && confirmBig); {
   userAns = symbols.concat(num, bigLetters, smallLetters);
-  console.log(userAns);
+    console.log(userAns);
 };
 
 
@@ -127,6 +130,6 @@ for (var i = 0; i < passLength; i++); {
   
 }
 
-var password = passOther.join("");
+var password = passOther;
 console.log("your new password is:" + password);
 }
